@@ -1,5 +1,6 @@
 # Files2uniqrecords
 
+<pre>
 (base) Miloss-MBP:~ milospjanic$ cat 1.test 
 aaa
 1
@@ -48,3 +49,6 @@ ccc
 comb.test
 uniq.test
 (base) Miloss-MBP:~ milospjanic$ for i in *test; do echo $i; awk 'NR==FNR { lines[$0]=1; next } $0 in lines' $i uniq.test> $i.uniq; done
+
+</pre>
+
